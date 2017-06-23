@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
  * Created by wikto on 23.06.2017.
  */
 public class CreateAccountScreenController extends Controller {
+
     public Button returnToSignInButton;
     public Button createAccountButton;
     public TextField userIDField;

@@ -34,19 +34,33 @@ public abstract class Controller {
     void switchToChoresListScreen() throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("choresListScreen.fxml"));
         Stage stage = (Stage) mainPane.getScene().getWindow();
-        stage.setScene(new Scene(root));
+        stage.setScene(new Scene(root, 600, 600));
         stage.show();
     }
 
     void switchToExpensesListScreen() throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("expensesListScreen.fxml"));
         Stage stage = (Stage) mainPane.getScene().getWindow();
+        stage.setScene(new Scene(root, 600, 600));
+        stage.show();
+    }
+
+    void switchToAddNewChoreScreen() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("addNewChoreScreen.fxml"));
+        Stage stage = (Stage) mainPane.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
     }
 
-    void switchToAddNewScreen() throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("addNewScreen.fxml"));
+    void switchToAddNewExpenseScreen() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("addNewExpenseScreen.fxml"));
+        Stage stage = (Stage) mainPane.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    void switchToStatisticsScreen() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("statisticsScreen.fxml"));
         Stage stage = (Stage) mainPane.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();

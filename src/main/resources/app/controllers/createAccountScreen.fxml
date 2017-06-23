@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.CreateAccountScreenController">
+<AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.CreateAccountScreenController">
     <children>
         <VBox fx:id="loginVBox" layoutX="92.0" layoutY="77.0" prefHeight="266.0" prefWidth="417.0">
             <children>
