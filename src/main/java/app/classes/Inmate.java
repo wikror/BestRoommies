@@ -22,7 +22,7 @@ public class Inmate {
     @OneToMany(targetEntity = Expense.class, mappedBy = "author", cascade = CascadeType.ALL)
     private List<Expense> expenses = Lists.newArrayList();
 
-    @OneToMany(targetEntity = Chore.class, mappedBy = "inmate", cascade = CascadeType.ALL)
+    @OneToMany(targetEntity = Chore.class, mappedBy = "due", cascade = CascadeType.ALL)
     private List<Chore> chores = Lists.newArrayList();
 
 }

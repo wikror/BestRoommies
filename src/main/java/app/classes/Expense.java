@@ -15,7 +15,7 @@ public class Expense {
     @Column(name = "EXPENSE_ID", nullable = false)
     private Long id;
 
-    @Column(name = "EXPENSE_NAME")
+    @Column(name = "EXPENSE_NAME", nullable = false)
     private String name;
 
     @ManyToOne(targetEntity = Inmate.class, cascade = CascadeType.ALL, optional = false)
