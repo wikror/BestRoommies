@@ -25,4 +25,40 @@ public class Inmate {
     @OneToMany(targetEntity = Chore.class, mappedBy = "due", cascade = CascadeType.ALL)
     private List<Chore> chores = Lists.newArrayList();
 
+
+    /*Getter & Setter methods for the attributes
+     */
+
+    public String getInmateId() {
+        return inmateId;
+    }
+
+    public void setInmateId(String inmateId) {
+        this.inmateId = inmateId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<Expense> getExpenses() {
+        return expenses;
+    }
+
+    public void setExpenses(List<Expense> expenses) {
+        this.expenses = expenses;
+    }
+
+    public List<Chore> getChores() {
+        return chores;
+    }
+
+    public void setChores(List<Chore> chores) {
+        this.chores = chores;
+    }
+
 }

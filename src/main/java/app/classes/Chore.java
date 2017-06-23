@@ -25,8 +25,41 @@ public class Chore {
     @Column(name = "CHORE_NAME")
     private String name;
 
+
+    /* Constructors */
     public Chore(){}
 
     public Chore(Inmate inmate, Date date) {
     }
+
+    
+    /*Getter & Setter methods for the attributes
+    (except the auto-generated Id)
+     */
+
+    public Inmate getDue() {
+        return due;
+    }
+
+    public void setDue(Inmate due) {
+        this.due = due;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
 }

@@ -28,4 +28,41 @@ public class Expense {
     @Column(name = "EXPENSE_VALUE")
     private Float value;
 
+
+    /*Getter & Setter methods for the attributes
+    (except the auto-generated Id)
+     */
+    
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Inmate getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Inmate author) {
+        this.author = author;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Float getValue() {
+        return value;
+    }
+
+    public void setValue(Float value) {
+        this.value = value;
+    }
+
 }
