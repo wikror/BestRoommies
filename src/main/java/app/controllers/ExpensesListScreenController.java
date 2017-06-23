@@ -33,12 +33,13 @@ public class ExpensesListScreenController extends ListScreenController<Expense> 
         updateTable();
     }
 
-    public void updateTable() {
+    public ObservableList<Expense> updateTable() {
         //todo commented code should get stuff from db
 //        List<Expense> downloadedList = ExpenseService.getInstance().findAll();
 //        ObservableList<Expense> list = FXCollections.observableArrayList(downloadedList);
         ObservableList<Expense> list = FXCollections.observableArrayList();
-        choresExpensesTable.setItems(list);
+//        choresExpensesTable.setItems(list);
+        return list;
     }
 
 }

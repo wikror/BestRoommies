@@ -1,6 +1,7 @@
 package app.controllers;
 
 import app.classes.Inmate;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -63,5 +64,5 @@ public abstract class ListScreenController<T> extends Controller implements Init
         }
     }
 
-    public abstract void updateTable();
+    public abstract ObservableList<T> updateTable();
 }

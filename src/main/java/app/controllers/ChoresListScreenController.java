@@ -23,20 +23,23 @@ public class ChoresListScreenController extends ListScreenController<Chore> {
     public void initialize(URL location, ResourceBundle resources) {
         userColumn.setCellValueFactory(new PropertyValueFactory<>("user"));
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
-        choreExpenseColumn.setCellValueFactory(new PropertyValueFactory<>("toString"));
+        choreExpenseColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        choresExpensesTable.setItems(updateTable());
     }
 
     public ChoresListScreenController() {
-        updateTable();
+//        updateTable();
     }
 
-    public void updateTable() {
+    public ObservableList<Chore> updateTable() {
         //todo commented code should get stuff from db
 //        List<Expense> downloadedList = ExpenseService.getInstance().findAll();
 //        ObservableList<Expense> list = FXCollections.observableArrayList(downloadedList);
         ObservableList<Chore> list = FXCollections.observableArrayList();
         list.add(new Chore());
+        System.out.println(list);
 //        list.add(new Chore(new Inmate(), new Date()));
-        choresExpensesTable.setItems(list);
+//        choresExpensesTable.setItems(list);
+        return list;
     }
 }
