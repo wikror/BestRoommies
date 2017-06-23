@@ -1,5 +1,7 @@
 package app.controllers;
 
+import app.classes.Inmate;
+import app.persistence.PersitenceUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,6 +9,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.MenuBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
+import javax.persistence.EntityManager;
+import java.util.List;
 
 public abstract class Controller {
 
@@ -66,4 +71,26 @@ public abstract class Controller {
         stage.show();
     }
 
+
+    /*
+    Persistence methods (to be added soon)
+     */
+
+    public Inmate retrieveInmate(Inmate inmate) {
+        String id = inmate.getInmateId();
+        EntityManager entityManager = PersitenceUtils.getEntityManager();
+        entityManager.getTransaction().begin();
+        Inmate retrievedInmate = (Inmate) entityManager.createQuery(
+                "from Inmate where inmateId = :inmateId").setParameter("inmateId", id).getSingleResult();
+        entityManager.getTransaction().commit();
+        return retrievedInmate;
+    }
+
+    public List<Inmate> retrieveAllInmates() {
+        EntityManager entityManager = PersitenceUtils.getEntityManager();
+        entityManager.getTransaction().begin();
+        List<Inmate> retrievedInmates = entityManager.createQuery("from Inmate order by inmateId").getResultList();
+        entityManager.getTransaction().commit();
+        return retrievedInmates;
+    }
 }
