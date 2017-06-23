@@ -32,7 +32,7 @@ public class Expense {
     /*Getter & Setter methods for the attributes
     (except the auto-generated Id)
      */
-    
+
     public String getName() {
         return name;
     }

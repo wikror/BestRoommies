@@ -19,6 +19,11 @@ public class Inmate {
     @Column(name = "INMATE_PASSWORD")
     private String password;
 
+
+    public Inmate(String id, String s) {
+        inmateId = id;
+        password = s;
+    }
     @OneToMany(targetEntity = Expense.class, mappedBy = "author", cascade = CascadeType.ALL)
     private List<Expense> expenses = Lists.newArrayList();
 
