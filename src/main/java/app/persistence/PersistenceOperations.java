@@ -13,7 +13,8 @@ import java.util.List;
 public class PersistenceOperations {
 
     /*
-    Persistence methods (to be added soon)
+    Persistence methods (more to be added soon).
+    Controllers should call the service instead of having direct access to persistence methods.
      */
 
     //Get an inmate from database (as identified by ID)
