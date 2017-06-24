@@ -71,4 +71,8 @@ public abstract class Controller {
         stage.show();
     }
 
+    void switchToPreviousScreen() throws Exception {
+        //todo saving current screen before switching?
+    }
+
 }

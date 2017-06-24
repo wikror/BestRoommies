@@ -56,7 +56,7 @@
                             </rowConstraints>
                             <children>
                                 <Button fx:id="addNewChoreButton" mnemonicParsing="false" onAction="#addNewChore" text="Add new chore" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                <Button fx:id="viewExpensesChoresButton" mnemonicParsing="false" onAction="#viewChores" text="View expenses" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <Button fx:id="viewExpensesChoresButton" mnemonicParsing="false" onAction="#viewChores" text="View chores" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                 <Button fx:id="addNewExpenseButton" mnemonicParsing="false" onAction="#addNewExpense" text="Add new expense" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                 <Button fx:id="viewStatisticsButton" mnemonicParsing="false" onAction="#viewStatistics" text="View statistics" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                             </children>

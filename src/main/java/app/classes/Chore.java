@@ -30,12 +30,16 @@ public class Chore {
 
 
     /* Constructors */
-    public Chore(){}
+    public Chore(){
+        due = new Inmate("id", "");
+        date = new Date();
+        name = "Empty chore";
+    }
 
     public Chore(Inmate inmate, Date date) {
     }
 
-    
+
     /*Getter & Setter methods for the attributes
     (except the auto-generated Id)
      */
