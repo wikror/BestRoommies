@@ -25,6 +25,9 @@ public class Chore {
     @Column(name = "CHORE_NAME")
     private String name;
 
+    @Column(name = "CHORE_TYPE")
+    private String choreType;
+
 
     /* Constructors */
     public Chore(){}
@@ -59,6 +62,14 @@ public class Chore {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getChoreType() {
+        return choreType;
+    }
+
+    public void setChoreType(String type) {
+        this.choreType = type;
     }
 
 

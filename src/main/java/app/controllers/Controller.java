@@ -71,26 +71,4 @@ public abstract class Controller {
         stage.show();
     }
 
-
-    /*
-    Persistence methods (to be added soon)
-     */
-
-    public Inmate retrieveInmate(Inmate inmate) {
-        String id = inmate.getInmateId();
-        EntityManager entityManager = PersitenceUtils.getEntityManager();
-        entityManager.getTransaction().begin();
-        Inmate retrievedInmate = (Inmate) entityManager.createQuery(
-                "from Inmate where inmateId = :inmateId").setParameter("inmateId", id).getSingleResult();
-        entityManager.getTransaction().commit();
-        return retrievedInmate;
-    }
-
-    public List<Inmate> retrieveAllInmates() {
-        EntityManager entityManager = PersitenceUtils.getEntityManager();
-        entityManager.getTransaction().begin();
-        List<Inmate> retrievedInmates = entityManager.createQuery("from Inmate order by inmateId").getResultList();
-        entityManager.getTransaction().commit();
-        return retrievedInmates;
-    }
 }
